@@ -1,38 +1,159 @@
-.App {
+/* src/App.css */
+body {
+  margin: 0;
+  font-family: 'Roboto', sans-serif;
+  background-color: #f4f4f9;
+  color: #333;
+}
+
+.app {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+h1 {
+  color: #4CAF50;
+  margin-bottom: 20px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+button {
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 14px;
+  margin: 5px;
+  transition: background-color 0.3s ease;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+button:hover {
+  opacity: 0.9;
+}
+
+button.delete-button {
+  background-color: #e57373;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+button.delete-button:hover {
+  background-color: #d32f2f;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+button.edit-button {
+  background-color: #64b5f6;
+  color: white;
+}
+
+button.edit-button:hover {
+  background-color: #1976d2;
+}
+
+/* Task Item Styling */
+.task-item {
+  background: #ffffff;
+  margin: 10px 0;
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  text-align: left;
+}
+
+.task-item h3 {
+  margin: 0 0 5px;
+  color: #333;
+}
+
+.task-item p {
+  margin: 0;
+  font-size: 14px;
+  color: #666;
+}
+
+/* Task Form Styling */
+form {
+  background: #ffffff;
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+  text-align: left;
+}
+
+form input,
+form textarea {
+  width: calc(100% - 20px);
+  padding: 10px;
+  margin: 5px 0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 14px;
+}
+
+form button {
+  width: 100%;
+  background-color: #4CAF50;
+  color: white;
+}
+
+form button:hover {
+  background-color: #388e3c;
+}
+
+
+.task-item .delete-button {
+  background-color: #e74c3c;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  padding: 10px 20px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.task-item .delete-button:hover {
+  background-color: #c0392b;
+}
+/* Loading Spinner */
+.spinner-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.3);
+  z-index: 999;
+}
+
+.spinner {
+  border: 4px solid rgba(255, 255, 255, 0.3);
+  border-top: 4px solid #4CAF50;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+/* src/App.css */
+@media (max-width: 600px) {
+  .app {
+    padding: 10px;
   }
-  to {
-    transform: rotate(360deg);
+
+  button {
+    font-size: 12px;
+    padding: 8px 10px;
+  }
+
+  .task-item {
+    padding: 10px;
   }
 }

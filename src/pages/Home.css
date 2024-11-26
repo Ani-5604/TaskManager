@@ -1,0 +1,90 @@
+/* src/components/Home.css */
+.home-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(135deg, #4caf50, #8bc34a);
+    color: #ffffff;
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+  }
+  
+  .welcome-section {
+    background: #ffffff;
+    color: #333;
+    padding: 40px 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    max-width: 400px;
+    width: 100%;
+  }
+  
+  .welcome-section h1 {
+    margin-bottom: 10px;
+    font-size: 24px;
+    color: #4caf50;
+  }
+  
+  .welcome-section p {
+    font-size: 16px;
+    margin-bottom: 20px;
+  }
+  
+  .button-group {
+    display: flex;
+    justify-content: space-around;
+  }
+  
+  .home-button {
+    padding: 10px 20px;
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 14px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .login-button {
+    background-color: #4caf50;
+  }
+  
+  .signup-button {
+    background-color: #64b5f6;
+  }
+  
+  .home-button:hover {
+    opacity: 0.9;
+  }
+  
+  @media (max-width: 600px) {
+    .welcome-section {
+      padding: 20px;
+    }
+  
+    .welcome-section h1 {
+      font-size: 20px;
+    }
+  
+    .home-button {
+      font-size: 12px;
+    }
+  }
+  .home-quote {
+    font-size: 18px;
+    font-weight: 500;
+    color: #333;
+    margin-bottom: 20px;
+    line-height: 1.5;
+  }
+  
+  .home-quote .highlight {
+    color: #4caf50;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    background: linear-gradient(135deg, #4caf50, #8bc34a);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  

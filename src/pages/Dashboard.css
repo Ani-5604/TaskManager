@@ -1,0 +1,83 @@
+/* Dashboard Container */
+.dashboard-container {
+    padding: 40px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    background-color: #f4f4f4;
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Header Styling */
+  .dashboard-header {
+    text-align: center;
+    margin-bottom: 30px;
+    background: linear-gradient(135deg, #42a5f5, #7e57c2);
+    padding: 30px;
+    color: #ffffff;
+    border-radius: 10px;
+  }
+  
+  .dashboard-title {
+    font-size: 2.5rem;
+    font-weight: bold;
+  }
+  
+  .dashboard-subtitle {
+    font-size: 1.2rem;
+    font-weight: 400;
+    margin-top: 10px;
+  }
+  
+  .highlight {
+    color: #ffca28;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+  }
+  
+  /* Content Sections */
+  .dashboard-content {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  /* Task Sections */
+  .task-sections {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+  
+  .task-form-section,
+  .task-list-section {
+    flex: 1;
+    min-width: 300px;
+    padding: 20px;
+    background: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Spinner Wrapper */
+  .spinner-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 300px;
+  }
+  
+  /* Mobile Responsiveness */
+  @media (max-width: 768px) {
+    .dashboard-title {
+      font-size: 2rem;
+    }
+  
+    .dashboard-subtitle {
+      font-size: 1rem;
+    }
+  
+    .task-sections {
+      flex-direction: column;
+    }
+  }
+  
