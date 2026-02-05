@@ -1,70 +1,144 @@
-# Getting Started with Create React App
+# ✅ Task Manager App
+**Version:** v1.0.0
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A modern React-based Task Manager application with user authentication using Firebase. Users can sign up, log in, and manage tasks efficiently through a clean and intuitive interface.
 
-## Available Scripts
+---
 
-In the project directory, you can run:
+## 🚀 Features
 
-### `npm start`
+- 🔐 User Authentication (Firebase Email & Password)
+- 📝 Add and Edit Tasks
+- 📄 Task Title & Description Support
+- 🔄 Reusable Task Form Component
+- 🧭 Client-side Routing (React Router)
+- 🎨 Clean UI with custom CSS
+- ⚛️ Built with React Hooks
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+---
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## 🛠️ Tech Stack
 
-### `npm test`
+### Frontend
+- React.js
+- React Router DOM
+- JavaScript (ES6)
+- HTML5
+- CSS3
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Backend / Services
+- Firebase Authentication
 
-### `npm run build`
+---
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## 📂 Project Structure
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+```
+src/
+├── components/
+│   ├── Auth/
+│   │   ├── Signup.jsx
+│   │   ├── Login.jsx
+│   │   └── Auth.css
+│   │
+│   ├── Home/
+│   │   ├── Home.jsx
+│   │   └── Home.css
+│   │
+│   └── Task/
+│       └── TaskForm.jsx
+│
+├── services/
+│   └── firebase.js
+│
+├── App.jsx
+├── main.jsx
+└── README.md
+```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+---
 
-### `npm run eject`
+## ⚙️ Setup Instructions
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+### 1️⃣ Clone the Repository
+```bash
+git clone https://github.com/your-username/task-manager-app.git
+cd task-manager-app
+```
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### 2️⃣ Install Dependencies
+```bash
+npm install
+```
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+### 3️⃣ Configure Firebase
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+Create a Firebase project and enable **Email/Password Authentication**.
 
-## Learn More
+Update `src/services/firebase.js`:
+```js
+import { initializeApp } from "firebase/app";
+import { getAuth } from "firebase/auth";
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+const firebaseConfig = {
+  apiKey: "YOUR_API_KEY",
+  authDomain: "YOUR_AUTH_DOMAIN",
+  projectId: "YOUR_PROJECT_ID",
+  appId: "YOUR_APP_ID",
+};
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+const app = initializeApp(firebaseConfig);
+export const auth = getAuth(app);
+```
 
-### Code Splitting
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+### 4️⃣ Run the Application
+```bash
+npm run dev
+```
 
-### Analyzing the Bundle Size
+App will run at:
+```
+http://localhost:5173
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+---
 
-### Making a Progressive Web App
+## 🧠 Core Components
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+### 🔹 TaskForm
+- Used for both adding and editing tasks
+- Controlled inputs using `useState`
+- Reusable and scalable
 
-### Advanced Configuration
+### 🔹 Signup
+- Firebase authentication
+- Error handling
+- Redirects to dashboard on success
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+### 🔹 Home
+- Landing page
+- Navigation to Login and Signup
 
-### Deployment
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+## 📌 Future Enhancements
 
-### `npm run build` fails to minify
+- Task deletion
+- Task status (completed / pending)
+- Firestore database integration
+- Protected routes
+- User profile page
+- Dark mode
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+---
+
+## 📜 License
+
+MIT License
+
+---
+
+**Status:** Actively Developed  
+**Author:** Your Name
